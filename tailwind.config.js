@@ -24,7 +24,14 @@ module.exports = {
       },
       borderRadius: {
         '4xl': '2rem',
-      }
+      },
+      colors: {
+        'regal-blue': '#243c5a',
+      },
     }
   },
+  plugins: [
+    require('tailwindcss'),
+    require('autoprefixer'),
+  ]
 }

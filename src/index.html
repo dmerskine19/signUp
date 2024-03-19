@@ -3,77 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vite App</title>
+    <title>MiHSEF</title>
     <link href="output.css" rel="stylesheet">
 </head>
 <body>
-    <header id="header" class="bg-blue-900 p-4 text-center flex justify-between items-center">
-        <div class="flex items-center">
-            <h1 class="text-3xl font-bold mr-4">
-                <img src="./images/MiHSEF_Logo.png" alt="MiHSEF Logo" class="inline-block w-8 h-8 mr-2"> 
-                MiHSEF
-            </h1>
-            <a href="#secondPage" class="text-white hover:text-gray-300">Second Page</a>
-            <a href="#thirdPage" class="text-white ml-4 hover:text-gray-300">Third Page</a>
-            <a href="#fourthPage" class="text-white ml-4 hover:text-gray-300">Fourth Page</a>
-        </div>
-        <div class="ml-auto">
-            <button id="signupButton" class="text-white hover:text-gray-300">Sign Up</button>
-        </div>
-    </header>
 
+<div id="myModel" class="model">
+    <div class="model-content">
+        <span class="close">&times;</span>
+        <h2>Sign In</h2>
+        <form id="signInForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+            <button type="submit">Sign In</button>
+        </form>
+    </div>
+</div>
+
+<div id="overlay" class="overlay"></div>
+
+<header id="header" class="bg-gradient-to-r from-blue-900 to-blue-600 p-4 text-center flex justify-between items-center">
+    <div class="flex items-center">
+        <h1 class="text-3xl font-bold mr-4 text-white">
+            <img src="/images/MiHSEF_Logo.png" alt="MiHSEF Logo" class="inline-block w-8 h-8 mr-2"> 
+            MiHSEF
+        </h1>
+        <nav class="text-white">
+            <a href="#secondPage" class="nav-link">Second Page</a>
+            <a href="#thirdPage" class="nav-link ml-4">Third Page</a>
+            <a href="#fourthPage" class="nav-link ml-4">Fourth Page</a>
+        </nav>
+    </div>
+    <div class="ml-auto">
+        <button id="signinButton" type="button" class="text-white hover:text-gray-300">Sign In</button>
+    </div>
+</header>
+
+<div class="container mx-auto flex flex-col items-center justify-center min-h-screen">
+    <div class="text-4xl my-8">
+        <span class="text-orange-500">Mi</span>HSEF
+    </div>
+    <div class="signupButton">
+        <a href="signup.html" class="py-3 px-6 bg-blue-500 text-white rounded hover:bg-blue-600">Sign Up</a>
+    </div>
+</div>
+
+<div id="secondPage" class="bg-gray-200 text-gray-800">
     <div class="container mx-auto flex flex-col items-center justify-center min-h-screen">
-        <div class="text-4xl my-8">
-            <span class="text-orange-500">Mi</span>HSEF
-        </div>
+        Second Page Content
     </div>
-    
-    <div id="secondPage" class="h-screen bg-gray-800 text-white">
-        <div class="container mx-auto flex flex-col items-center justify-center min-h-screen">
-            <!-- Content for the second page -->
-        </div>
-    </div>
+</div>
 
-    <div id="thirdPage" class="h-screen bg-pink-900 text-white">
-        <div class="container mx-auto flex flex-col items-center justify-center min-h-screen">
-            <!-- Content for the third page -->
-        </div>
+<div id="thirdPage" class="bg-pink-200 text-gray-800">
+    <div class="container mx-auto flex flex-col items-center justify-center min-h-screen">
+        Third Page Content
     </div>
+</div>
 
-    <div id="fourthPage" class="h-screen bg-green-800 text-white">
-        <div class="container mx-auto flex flex-col items-center justify-center min-h-screen">
-            <!-- Content for the fourth page -->
-        </div>
+<div id="fourthPage" class="bg-green-200 text-gray-800">
+    <div class="container mx-auto flex flex-col items-center justify-center min-h-screen">
+        Fourth Page Content
     </div>
-    
-    <a href="#header" class="scroll-to-top" title="Scroll to Top">
-        <div class="scroll-up">
-            <a class="fas fa-angle-up"></a>
-        </div>
-    </a>
+</div>
 
-    <div id="signupModal" class="modal-overlay hidden fixed inset-0 z-50 overflow-auto bg-gray-800 bg-opacity-75">
-        <div class="modal-content bg-white p-8 rounded-lg mx-auto mt-20">
-            <span id="closeButton" class="close absolute top-0 right-0 p-2 text-3xl">&times;</span>
-            <h2 class="text-2xl mb-6">Sign Up</h2>
-            <form id="signupForm" class="mb-6">
-                <div class="mb-2 relative">
-                    <label for="email" class="block text-gray-700 font-bold mb-2">Email Address</label>
-                    <input id="email" name="email" class="input-field w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" type="email" placeholder="Enter your email" required>
-                    <div class="absolute top-1/2 transform -translate-y-8 right-0">
-                        <i id="emailValidityCheck" class="fas"></i>
-                    </div>
-                </div>
-                <div class="mb-4">
-                    <label for="password" class="block text-gray-700 font-bold mb-2">Password</label>
-                    <input id="password" name="password" class="input-field w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" type="password" placeholder="Enter your password" required>
-                </div>
-                <button type="submit" class="py-3 px-6 bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 text-white font-bold rounded-lg">Sign Up</button>
-            </form>
-        </div>
+<a href="#header" class="scroll-to-top" title="Scroll to Top">
+    <div class="scroll-up bg-blue-900 text-white p-3 rounded-full fixed bottom-8 right-8">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
     </div>
-
-    <script src="main.js"></script>
+</a>
+<script src="main.js"></script>
 </body>
-
 </html>
