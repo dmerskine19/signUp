@@ -10,6 +10,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 var model = document.getElementById("myModel");
 var btn = document.getElementById("signinButton");
 var span = document.querySelector(".close");
+var signupBtn = document.getElementById("signupButton");
 
 btn.addEventListener('click', function() {
     model.style.display = "block";
@@ -27,3 +28,9 @@ function closeModal() {
     model.style.display = "none";
     document.getElementById('overlay').style.display = "none";
 }
+
+signupBtn.addEventListener('click', function() {
+    model.style.display = "block";
+    document.getElementById('overlay').style.display = "block";
+});
+

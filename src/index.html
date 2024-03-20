@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<div id="myModel" class="model">
+<div id="myModel" class="model hidden">
     <div class="model-content">
         <span class="close">&times;</span>
         <h2>Sign In</h2>
@@ -17,12 +17,12 @@
             <input type="text" id="username" name="username" required><br><br>
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required><br><br>
-            <button type="submit">Sign In</button>
+            <button type="submit" class="btn-primary">Sign In</button>
         </form>
     </div>
 </div>
 
-<div id="overlay" class="overlay"></div>
+<div id="overlay" class="overlay hidden"></div>
 
 <header id="header" class="bg-gradient-to-r from-blue-900 to-blue-600 p-4 text-center flex justify-between items-center">
     <div class="flex items-center">
@@ -37,7 +37,7 @@
         </nav>
     </div>
     <div class="ml-auto">
-        <button id="signinButton" type="button" class="text-white hover:text-gray-300">Sign In</button>
+        <a href="#signinButton" id="signinButton">Sign In</a>
     </div>
 </header>
 
@@ -46,23 +46,23 @@
         <span class="text-orange-500">Mi</span>HSEF
     </div>
     <div class="signupButton">
-        <a href="signup.html" class="py-3 px-6 bg-blue-500 text-white rounded hover:bg-blue-600">Sign Up</a>
+        <a href="#signupButton" id="signupButton">Sign Up</a>
     </div>
 </div>
 
-<div id="secondPage" class="bg-gray-200 text-gray-800">
+<div id="secondPage" class="page bg-gray-200 text-gray-800">
     <div class="container mx-auto flex flex-col items-center justify-center min-h-screen">
         Second Page Content
     </div>
 </div>
 
-<div id="thirdPage" class="bg-pink-200 text-gray-800">
+<div id="thirdPage" class="page bg-pink-200 text-gray-800">
     <div class="container mx-auto flex flex-col items-center justify-center min-h-screen">
         Third Page Content
     </div>
 </div>
 
-<div id="fourthPage" class="bg-green-200 text-gray-800">
+<div id="fourthPage" class="page bg-green-200 text-gray-800">
     <div class="container mx-auto flex flex-col items-center justify-center min-h-screen">
         Fourth Page Content
     </div>
@@ -76,5 +76,3 @@
     </div>
 </a>
 <script src="main.js"></script>
-</body>
-</html>
