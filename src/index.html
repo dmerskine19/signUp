@@ -10,21 +10,41 @@
 
     <div id="myModel" class="model hidden">
         <div class="model-content">
-            <span class="close">&times;</span>
-            <h2>Sign In</h2>
-            <form id="signInForm">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required><br><br>
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required><br><br>
-                <button type="submit" class="btn-primary">Sign In</button>
-            </form>
+            <span class="close">×</span>
+            <h2>Sign Up</h2>
+            <div id="step1">
+                <form id="signUpForm">
+                    <label for="firstname">First Name:</label>
+                    <input type="text" id="firstname" name="firstname" required><br><br>
+                    <label for="secondname">Second Name:</label>
+                    <input type="text" id="secondname" name="secondname" required><br><br>
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email" required><br><br>
+                    <button type="button" id="next1" class="btn-primary">Next</button>
+                </form>
+            </div>
+            <div id="step2" class="hidden">
+                <form id="signUpForm2">
+                    <label for="schoolname">School Name:</label>
+                    <input type="text" id="schoolname" name="schoolname" required><br><br>
+                    <label for="grade">Grade:</label>
+                    <select id="grade" name="grade" required>
+                        <option value="">Select Grade</option>
+                        <option value="9">9th Grade</option>
+                        <option value="10">10th Grade</option>
+                        <option value="11">11th Grade</option>
+                        <option value="12">12th Grade</option>
+                    </select><br><br>
+                    <button type="button" id="back1" class="btn-secondary">Back</button>
+                    <button type="submit" id="submit" class="btn-primary">Sign Up</button>
+                </form>
+            </div>
         </div>
     </div>
 
     <div id="overlay" class="overlay hidden"></div>
 
-    <header id="header" class="bg-gradient-to-r from-blue-900 to-blue-600 p-4 text-center flex justify-between items-center">
+    <header id="header" class="bg-blue-900 p-4 text-center flex justify-between items-center">
         <div class="flex items-center">
             <h1 class="text-3xl font-bold mr-4 text-white">
                 <img src="/images/MiHSEF_Logo.png" alt="MiHSEF Logo" class="inline-block w-8 h-8 mr-2"> 
@@ -33,20 +53,21 @@
             <nav class="text-white">
                 <a href="#secondPage" class="nav-link">Second Page</a>
                 <a href="#thirdPage" class="nav-link ml-4">Third Page</a>
-                <a href="#fourthPage" class="nav-link ml-4">Fourth Page</a>
+                <a href="#fourthPage" class="nav-link ml-2">Fourth Page</a>
             </nav>
         </div>
         <div class="ml-auto">
-            <a href="https://mihsef.leagueos.gg/login" id="signinButton">Sign In</a>
+            <a href="https://mihsef.leagueos.gg/login" id="signinButton" class="bg-blue-500 text-white rounded px-2 py-1 hover:bg-blue-400">Sign In</a>
         </div>
     </header>
+    
 
     <div class="container mx-auto flex flex-col items-center justify-center min-h-screen">
         <div class="text-4xl my-8">
             MiHSEF
         </div>
         <div class="signupButton">
-            <a href="#signupButton" id="signupButton" class="font-bold">Sign Up</a>
+            <a href="javascript:void(0);" id="signupButton" class="font-bold">Sign Up</a>
         </div>
     </div>
 
@@ -70,9 +91,9 @@
     </div>
 
     <a href="#header" class="scroll-to-top" title="Scroll to Top">
-        <div class="scroll-up bg-blue-900 text-white p-3 rounded-full fixed bottom-8 right-8">
+        <div class="scroll-up">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
             </svg>
         </div>
     </a>
