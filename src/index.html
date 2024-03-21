@@ -8,32 +8,40 @@
 </head>
 <body>
 
-    <div id="myModel" class="model hidden">
-        <div class="model-content">
-            <span class="close">×</span>
-            <h2>Sign Up</h2>
-            <div id="step1">
-                <form id="signUpForm">
-                    <label for="firstname">First Name:</label>
-                    <input type="text" id="firstname" name="firstname" required><br><br>
-                    <label for="secondname">Second Name:</label>
-                    <input type="text" id="secondname" name="secondname" required><br><br>
-                    <label for="email">Email:</label>
-                    <input type="text" id="email" name="email" required><br><br>
-                    <button type="button" id="next1" class="btn-primary">Next</button>
-                </form>
-            </div>
+<div id="myModel" class="model hidden">
+    <div class="model-content">
+        <span class="close">×</span>
+        <h2>Sign Up</h2>
+        <div id="step1">
+            <form id="signUpForm">
+                <div class="name-fields justify-stretch">
+                    <div class="field">
+                        <label for="firstname">First Name:</label>
+                        <input type="text" id="firstname" name="firstname" required>
+                    </div>
+                    <div class="field">
+                        <label for="lastname">Last Name:</label>
+                        <input type="text" id="lastname" name="lastname" required>
+                    </div>
+                </div>
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" required><br><br>
+                <label for="school">Name of school/school district:</label>
+                <input type="text" id="school" name="school" required><br><br>
+                <button type="button" id="next1" class="btn-primary">Next</button>
+            </form>
+        </div>
             <div id="step2" class="hidden">
                 <form id="signUpForm2">
                     <label for="schoolname">School Name:</label>
                     <input type="text" id="schoolname" name="schoolname" required><br><br>
-                    <label for="grade">Grade:</label>
-                    <select id="grade" name="grade" required>
-                        <option value="">Select Grade</option>
-                        <option value="9">9th Grade</option>
-                        <option value="10">10th Grade</option>
-                        <option value="11">11th Grade</option>
-                        <option value="12">12th Grade</option>
+                    <label for="game">Grade:</label>
+                    <select id="game" name="game" required>
+                        <option value="">Valorant</option>
+                        <option value="9">Rocket League</option>
+                        <option value="10">Smash</option>
+                        <option value="11">Overwatch 2</option>
+                        <option value="12">csgo 2</option>
                     </select><br><br>
                     <button type="button" id="back1" class="btn-secondary">Back</button>
                     <button type="submit" id="submit" class="btn-primary">Sign Up</button>

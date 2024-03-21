@@ -161,3 +161,12 @@
 .scroll-up:hover {
   background-color: #2b6cb0;
 }
+
+.name-fields {
+    display: flex;
+}
+
+.field {
+    flex: 1;
+    margin-right: 10px;
+}
