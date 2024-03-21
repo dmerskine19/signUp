@@ -37,3 +37,18 @@ document.getElementById('back1').addEventListener('click', function() {
     document.getElementById('step2').classList.add('hidden');
     document.getElementById('step1').classList.remove('hidden');
 });
+
+document.getElementById('next2').addEventListener('click', function() {
+    document.getElementById('step2').classList.add('hidden');
+    document.getElementById('step3').classList.remove('hidden');
+});
+
+document.getElementById('back2').addEventListener('click', function() {
+    document.getElementById('step3').classList.add('hidden');
+    document.getElementById('step2').classList.remove('hidden');
+});
+
+document.getElementById('submit3').addEventListener('click', function() {
+    //submit logic
+});
+

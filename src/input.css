@@ -82,6 +82,7 @@
 
 .model-content {
   text-align: center;
+  max-height: cal(100vh - 100px);
 }
 
 .close {
@@ -170,3 +171,18 @@
     flex: 1;
     margin-right: 10px;
 }
+
+.btn-minecraft {
+    background-color: #b8b8b8;
+    border: 2px solid #4c4c4c;
+    color: #ffffff;
+    font-family: 'Minecraft', sans-serif;
+    font-size: 16px;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.btn-minecraft:hover {
+    background-color: #8e8e8e;
+}
+

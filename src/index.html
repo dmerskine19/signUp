@@ -1,109 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MiHSEF</title>
-    <link href="output.css" rel="stylesheet">
-</head>
-<body>
-
-<div id="myModel" class="model hidden">
-    <div class="model-content">
-        <span class="close">×</span>
-        <h2>Sign Up</h2>
-        <div id="step1">
-            <form id="signUpForm">
-                <div class="name-fields justify-stretch">
-                    <div class="field">
-                        <label for="firstname">First Name:</label>
-                        <input type="text" id="firstname" name="firstname" required>
-                    </div>
-                    <div class="field">
-                        <label for="lastname">Last Name:</label>
-                        <input type="text" id="lastname" name="lastname" required>
-                    </div>
-                </div>
-                <label for="email">Email:</label>
-                <input type="text" id="email" name="email" required><br><br>
-                <label for="school">Name of school/school district:</label>
-                <input type="text" id="school" name="school" required><br><br>
-                <button type="button" id="next1" class="btn-primary">Next</button>
-            </form>
-        </div>
-            <div id="step2" class="hidden">
-                <form id="signUpForm2">
-                    <label for="schoolname">School Name:</label>
-                    <input type="text" id="schoolname" name="schoolname" required><br><br>
-                    <label for="game">Grade:</label>
-                    <select id="game" name="game" required>
-                        <option value="">Valorant</option>
-                        <option value="9">Rocket League</option>
-                        <option value="10">Smash</option>
-                        <option value="11">Overwatch 2</option>
-                        <option value="12">csgo 2</option>
-                    </select><br><br>
-                    <button type="button" id="back1" class="btn-secondary">Back</button>
-                    <button type="submit" id="submit" class="btn-primary">Sign Up</button>
-                </form>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>MiHSEF</title>
+      <link href="output.css" rel="stylesheet">
+   </head>
+   <body>
+      <div id="myModel" class="model hidden">
+         <div class="model-content">
+            <span class="close">×</span>
+            <h2>Sign Up</h2>
+            <div id="step1">
+               <form id="signUpForm">
+                  <div class="name-fields flex mb-2">
+                     <div class="field flex-1 mr-1">
+                        <label for="firstname" class="block mb-2">First Name:</label>
+                        <input type="text" id="firstname" name="firstname" required class="w-full py-2 px-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                     </div>
+                     <div class="field flex-1">
+                        <label for="lastname" class="block mb-2">Last Name:</label>
+                        <input type="text" id="lastname" name="lastname" required class="w-full py-2 px-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                     </div>
+                  </div>
+                  <label for="email">Email:</label>
+                  <input type="text" id="email" name="email" required><br><br>
+                  <label for="school">Name of school/school district:</label>
+                  <input type="text" id="school" name="school" required><br><br>
+                  <div class="mb-4">
+                     <label for="schooltype" class="block mb-2">School Type:</label>
+                     <select id="schooltype" name="schooltype" required class="w-full py-2 px-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option value="" disabled selected>Select School Type</option>
+                        <option value="Public">Public</option>
+                        <option value="Private">Private</option>
+                        <option value="Charter">Charter</option>
+                        <option value="Other">Other</option>
+                     </select>
+                  </div>
+                  <div id="otherSchoolType" class="hidden mb-4">
+                     <label for="otherSchoolTypeInput" class="block mb-2">Specify Other:</label>
+                     <input type="text" id="otherSchoolTypeInput" name="otherSchoolTypeInput" class="w-full py-2 px-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                  </div>
+                  <button type="button" id="next1" class="btn-primary btn-minecraft">Next</button>
+               </form>
             </div>
-        </div>
-    </div>
-
-    <div id="overlay" class="overlay hidden"></div>
-
-    <header id="header" class="bg-blue-900 p-4 text-center flex justify-between items-center">
-        <div class="flex items-center">
+            <div id="step2" class="hidden">
+               <div class="container mx-auto flex flex-col">
+                  <form id="signUpForm2">
+                     <div class="mb-4">
+                        <label class="block mb-2" for="esportsProgram">Esports Programs Participating:</label>
+                        <select id="esportsProgram" name="esportsProgram" required class="w-full py-2 px-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                           <option value="" disabled selected>Grade Level</option>
+                           <option value="High School (8-12)">High School (8-12)</option>
+                           <option value="Middle School (6-8)">Middle School (6-8)</option>
+                           <option value="Other">Other</option>
+                        </select>
+                        <div id="otherEsportsProgram" class="hidden mt-2">
+                           <label class="block mb-2" for="otherEsportsProgramInput">Specify Other:</label>
+                           <input type="text" id="otherEsportsProgramInput" name="otherEsportsProgramInput" class="w-full py-2 px-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                     </div>
+                     <div class="mb-4">
+                        <label class="block mb-2" for="enrollment">Enrollment of Highschool: (500 Students)</label>
+                        <input type="text" id="enrollment" name="enrollment" required class="w-full py-2 px-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                     </div>
+                     <div class="mb-4">
+                        <label class="block mb-2">Do your players compete using school supplied equipment?</label>
+                        <div>
+                           <label class="inline-flex items-center">
+                           <input type="radio" class="form-radio" name="schoolEquipment" value="Yes" required>
+                           <span class="ml-2">Yes</span>
+                           </label>
+                           <label class="inline-flex items-center ml-6">
+                           <input type="radio" class="form-radio" name="schoolEquipment" value="No">
+                           <span class="ml-2">No</span>
+                           </label>
+                        </div>
+                     </div>
+                     <div class="mb-6">
+                        <label class="block mb-2">Does your school/district administration approve of having an esports team?</label>
+                        <div>
+                           <label class="inline-flex items-center">
+                           <input type="radio" class="form-radio" name="approval" value="Yes" required>
+                           <span class="ml-2">Yes</span>
+                           </label>
+                           <label class="inline-flex items-center ml-6">
+                           <input type="radio" class="form-radio" name="approval" value="No">
+                           <span class="ml-2">No</span>
+                           </label>
+                        </div>
+                    </div>
+                    <button type="button" id="back1" class="btn-primary btn-minecraft">Back</button>
+                    <button type="button" id="next2" class="btn-primary btn-minecraft">Next</button>
+                  </form>
+               </div>
+            </div>
+            <div id="step3" class="hidden">
+                <div class="container mx-auto flex flex-col">
+                   <form id="signUpForm3">
+                      <div class="mb-4">
+                         <label class="block mb-2" for="additionalInfo">Additional Information:</label>
+                         <textarea id="additionalInfo" name="additionalInfo" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" rows="4"></textarea>
+                      </div>
+                      <button type="button" id="back2" class="btn-primary btn-minecraft">Back</button>
+                      <button type="submit" class="btn-primary btn-minecraft">Submit</button>
+                   </form>
+                </div>
+            </div>
+         </div>
+      </div>
+      <div id="overlay" class="overlay hidden"></div>
+      <header id="header" class="bg-blue-900 p-4 text-center flex justify-between items-center">
+         <div class="flex items-center">
             <h1 class="text-3xl font-bold mr-4 text-white">
-                <img src="/images/MiHSEF_Logo.png" alt="MiHSEF Logo" class="inline-block w-8 h-8 mr-2"> 
-                MiHSEF
+               <img src="/images/MiHSEF_Logo.png" alt="MiHSEF Logo" class="inline-block w-8 h-8 mr-2"> 
+               MiHSEF
             </h1>
             <nav class="text-white">
-                <a href="#secondPage" class="nav-link">Second Page</a>
-                <a href="#thirdPage" class="nav-link ml-4">Third Page</a>
-                <a href="#fourthPage" class="nav-link ml-2">Fourth Page</a>
+               <a href="#secondPage" class="nav-link">Second Page</a>
+               <a href="#thirdPage" class="nav-link ml-4">Third Page</a>
+               <a href="#fourthPage" class="nav-link ml-2">Fourth Page</a>
             </nav>
-        </div>
-        <div class="ml-auto">
+         </div>
+         <div class="ml-auto">
             <a href="https://mihsef.leagueos.gg/login" id="signinButton" class="bg-blue-500 text-white rounded px-2 py-1 hover:bg-blue-400">Sign In</a>
-        </div>
-    </header>
-    
-
-    <div class="container mx-auto flex flex-col items-center justify-center min-h-screen">
-        <div class="text-4xl my-8">
+         </div>
+      </header>
+      <div class="container mx-auto flex flex-col items-center justify-center min-h-screen">
+         <div class="text-4xl my-8">
             MiHSEF
-        </div>
-        <div class="signupButton">
+         </div>
+         <div class="signupButton">
             <a href="javascript:void(0);" id="signupButton" class="font-bold">Sign Up</a>
-        </div>
-    </div>
-
-
-    <div id="secondPage">
-        <div class="container mx-auto flex flex-col items-center justify-center min-h-screen">
+         </div>
+      </div>
+      <div id="secondPage">
+         <div class="container mx-auto flex flex-col items-center justify-center min-h-screen">
             Second Page Content
-        </div>
-    </div>
-
-    <div id="thirdPage">
-        <div class="container mx-auto flex flex-col items-center justify-center min-h-screen">
+         </div>
+      </div>
+      <div id="thirdPage">
+         <div class="container mx-auto flex flex-col items-center justify-center min-h-screen">
             Third Page Content
-        </div>
-    </div>
-
-    <div id="fourthPage">
-        <div class="container mx-auto flex flex-col items-center justify-center min-h-screen">
+         </div>
+      </div>
+      <div id="fourthPage">
+         <div class="container mx-auto flex flex-col items-center justify-center min-h-screen">
             Fourth Page Content
-        </div>
-    </div>
-
-    <a href="#header" class="scroll-to-top" title="Scroll to Top">
-        <div class="scroll-up">
+         </div>
+      </div>
+      <a href="#header" class="scroll-to-top" title="Scroll to Top">
+         <div class="scroll-up">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
             </svg>
-        </div>
-    </a>
-</body>
-<script src="main.js"></script>
+         </div>
+      </a>
+   </body>
+   <script src="main.js"></script>
