@@ -8,13 +8,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 var model = document.getElementById("myModel");
-var btn = document.getElementById("signinButton");
 var span = document.querySelector(".close");
-
-btn.addEventListener('click', function() {
-    model.style.display = "block";
-    document.getElementById('overlay').style.display = "block";
-});
+var btn = document.getElementById("signupButton");
 
 span.addEventListener('click', closeModal);
 window.addEventListener('click', function(event) {
@@ -27,3 +22,18 @@ function closeModal() {
     model.style.display = "none";
     document.getElementById('overlay').style.display = "none";
 }
+
+btn.addEventListener('click', function() {
+    model.style.display = "block";
+    document.getElementById('overlay').style.display = "block";
+});
+
+document.getElementById('next1').addEventListener('click', function() {
+    document.getElementById('step1').classList.add('hidden');
+    document.getElementById('step2').classList.remove('hidden');
+});
+
+document.getElementById('back1').addEventListener('click', function() {
+    document.getElementById('step2').classList.add('hidden');
+    document.getElementById('step1').classList.remove('hidden');
+});
