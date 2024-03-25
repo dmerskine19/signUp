@@ -3,7 +3,10 @@
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>MiHSEF</title>
+      <!-- Enhanced title for SEO -->
+      <title>MiHSEF: MI High School Esports Federation</title>
+      <!-- Meta description for better CTR -->
+      <meta name="description" content="MiHSEF (Michigan High School Esports Federation) is dedicated to fostering competitive esports at the high school level, ensuring a vibrant community and growth path for young esports enthusiasts.">
       <link href="output.css" rel="stylesheet">
    </head>
    <body>
@@ -16,15 +19,15 @@
                   <div class="name-fields flex mb-2">
                      <div class="field flex-1 mr-1">
                         <label for="firstname" class="block mb-2">First Name:</label>
-                        <input type="text" id="firstname" name="firstname" required class="w-full py-2 px-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <input type="text" id="firstname" name="firstname" required class="w-full py-2 px-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" autocomplete="given-name">
                      </div>
                      <div class="field flex-1">
                         <label for="lastname" class="block mb-2">Last Name:</label>
-                        <input type="text" id="lastname" name="lastname" required class="w-full py-2 px-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <input type="text" id="lastname" name="lastname" required class="w-full py-2 px-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" autocomplete="family-name">
                      </div>
                   </div>
                   <label for="email">Email:</label>
-                  <input type="text" id="email" name="email" required><br><br>
+                  <input type="email" id="email" name="email" required autocomplete="email"><br><br>
                   <label for="school">Name of school/school district:</label>
                   <input type="text" id="school" name="school" required><br><br>
                   <div class="mb-4">
@@ -103,6 +106,58 @@
                    </form>
                 </div>
             </div>
+
+            <div id="step4" class="hidden">
+               <div class="container mx-auto flex flex-col">
+                  <form id="signUpForm4">
+                     <div class="mb-4">
+                        <label for="primaryContact" class="block mb-2">Primary adult contact (must be employed by your school or district):</label>
+                        <input type="text" id="primaryContact" name="primaryContact" required class="w-full py-2 px-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                     </div>
+                     <div class="mb-4">
+                        <label for="primaryContactEmail" class="block mb-2">Primary contact email address:</label>
+                        <input type="email" id="primaryContactEmail" name="primaryContactEmail" required class="w-full py-2 px-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" autocomplete="email">
+                     </div>
+                     <div class="mb-4">
+                        <label for="primaryContactPhone" class="block mb-2">Primary contact phone:</label>
+                        <input type="tel" id="primaryContactPhone" name="primaryContactPhone" pattern="[0-9]{10}" required class="w-full py-2 px-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="1234567890" autocomplete="tel">
+                     </div>
+                    
+                     <div class="mb-4">
+                        <label for="primaryContactDiscord" class="block mb-2">Primary contact Discord account ID:</label>
+                        <input type="text" id="primaryContactDiscord" name="primaryContactDiscord" pattern=".+#\d{4}" required class="w-full py-2 px-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="DiscordAcct#1234">
+                     </div>
+                     <button type="button" id="back3" class="btn-primary btn-minecraft">Back</button>
+                     <button type="button" id="next4" class="btn-primary btn-minecraft">Next</button>
+                  </form>
+               </div>
+            </div>
+            <div id="step5" class="hidden">
+               <div class="container mx-auto flex flex-col">
+                   <form id="signUpForm5">
+                       <div class="mb-4">
+                           <label class="block mb-2">Which game titles do you offer at your school?</label>
+                           <div class="flex flex-wrap gap-2">
+                               <!-- Game checkboxes go here -->
+                           </div>
+                       </div>
+                       <div class="mb-4">
+                           <label for="teamWebsite" class="block mb-2">Team website address/URL:</label>
+                           <input type="url" id="teamWebsite" name="teamWebsite" class="w-full py-2 px-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" autocomplete="url">
+                       </div>
+                       <div class="mb-4">
+                           <label for="teamTwitter" class="block mb-2">Team Twitter account:</label>
+                           <input type="text" id="teamTwitter" name="teamTwitter" class="w-full py-2 px-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" autocomplete="off">
+                       </div>
+                       <div class="mb-4">
+                           <label for="involvement" class="block mb-2">How much involvement would you like to have with the MiHSEF?</label>
+                           <textarea id="involvement" name="involvement" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" rows="4"></textarea>
+                       </div>
+                       <button type="button" id="back4" class="btn-primary btn-minecraft">Back</button>
+                       <button type="submit" class="btn-primary btn-minecraft">Submit</button>
+                   </form>
+               </div>
+           </div>
          </div>
       </div>
       <div id="overlay" class="overlay hidden"></div>
@@ -124,7 +179,7 @@
       </header>
       <div class="container mx-auto flex flex-col items-center justify-center min-h-screen">
          <div class="text-4xl my-8">
-            MiHSEF
+            Welcome to MiHSEF: Your Hub for High School Esports
          </div>
          <div class="signupButton">
             <a href="javascript:void(0);" id="signupButton" class="font-bold">Sign Up</a>

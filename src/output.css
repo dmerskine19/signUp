@@ -684,6 +684,10 @@ video {
   flex-direction: column;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .items-center {
   align-items: center;
 }
@@ -694,6 +698,10 @@ video {
 
 .justify-between {
   justify-content: space-between;
+}
+
+.gap-2 {
+  gap: 0.5rem;
 }
 
 .rounded {
@@ -918,6 +926,17 @@ video {
 .field {
   flex: 1;
   margin-right: 10px;
+}
+
+.my-element {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  /* Vertically centers the child in the container */
 }
 
 .btn-minecraft {

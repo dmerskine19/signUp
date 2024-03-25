@@ -1,9 +1,22 @@
 {
+  "name": "signup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tailwindcss build src/input.css -o src/output.css",
+    "watch": "tailwindcss -i src/input.css -o src/output.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "^10.4.18",
+    "autoprefixer": "^10.4.19",
     "tailwindcss": "^3.4.1"
   },
   "dependencies": {
+    "postcss": "^8.4.38",
     "webkit": "^0.0.0"
   }
 }
